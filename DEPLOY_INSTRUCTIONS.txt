@@ -1,0 +1,11 @@
+THE AI VENTURE REVIEW - ISSUE 001 WORKING PREVIEW
+
+Upload the CONTENTS of this package into the ROOT of your GitHub repository (not the enclosing folder).
+
+This package includes the latest homepage refinement, the existing website pages and styles, and a working 24-page magazine PDF.
+
+IMPORTANT: This is an unapproved working preview, NOT the final magazine. Review and replace magazine/issue-001-preview.pdf after final editorial approval, and update the preview labels on magazine/index.html.
+
+Check https://abhimull1.github.io/aivr-website-preview/magazine/ after GitHub Pages updates.
+
+If the browser cannot display the inline PDF, the download and open-in-new-tab links provide alternatives.
