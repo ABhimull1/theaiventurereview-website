@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090f2c"><title>Issue 001 | The AI Venture Review™</title>
+<style>
+:root{color-scheme:dark;--bg:#090f2c;--panel:#142346;--line:#536d9d;--text:#f3f6ff;--muted:#bac6df;--yellow:#ffdf4b;--cyan:#16c8f2}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit}header{position:relative;z-index:10;background:#0b1433;border-bottom:1px solid #30436e;padding:18px max(16px,4vw);display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:clamp(16px,2.6vw,23px);font-weight:850;text-decoration:none;letter-spacing:-.03em}.brand span{color:var(--cyan)}.tag{font-size:10px;letter-spacing:.17em;color:var(--muted);font-weight:750;margin-top:6px}.menu{position:relative}
+
+.menu {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.menu summary {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  min-width: 120px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+summary,.btn,select{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--text);font:inherit;font-weight:700;padding:12px 16px;cursor:pointer}summary{list-style:none}summary::-webkit-details-marker{display:none}.menu nav{position:absolute;right:0;top:calc(100% + 10px);min-width:220px;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 35px #0008;padding:10px}.menu nav a{display:block;text-decoration:none;padding:12px;border-radius:8px}.menu nav a:hover{background:#263961}main{max-width:1300px;margin:auto;padding:24px 14px 60px}h1{font-size:clamp(25px,5vw,42px);margin:0 0 8px}.sub{color:var(--muted);margin:0 0 18px}.toolbar{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}.btn:disabled{opacity:.4;cursor:not-allowed}.primary{background:var(--yellow);color:#10152b;border-color:var(--yellow)}select{min-width:70px}.status{font-size:13px;color:var(--muted);text-align:center;min-height:20px;margin-bottom:10px}.reader{width:100%;min-height:380px;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:pan-y}.page{background:white;overflow:hidden}.page img{display:block;width:100%;height:100%;object-fit:fill;user-select:none;-webkit-user-drag:none}.links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}.links a{display:inline-block;text-decoration:none;border:1px solid var(--line);padding:13px 18px;border-radius:999px;font-weight:650}.hint{text-align:center;color:var(--muted);font-size:14px;margin:16px auto;max-width:650px}.fallback{max-width:600px;margin:auto}.fallback img{display:block;width:100%;height:auto}#fallback{display:none} @media(max-width:550px){header{padding:14px}.tag{font-size:9px}.toolbar{gap:7px}.btn,select{padding:10px}.reader{min-height:280px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div><a class="brand" href="../">THE <span>AI VENTURE REVIEW™</span></a><div class="tag">PRACTICAL AI · AUTOMATION · INNOVATION</div></div><details class="menu"><summary>☰ Menu</summary><nav><a href="../">Home</a><a href="./">Magazine</a><a href="../field-guide/">Field Guide</a><a href="../resources/">Resource Vault</a><a href="../advertise/">Advertise</a><a href="../subscribe/">Subscribe</a><a href="../links/">Quick Links</a></nav></details></header>
+<main><h1>Read Issue 001 online</h1><p class="sub">AI Agents at Work · November 2026 · 24 pages</p>
+<div class="toolbar"><button class="btn" id="prev" type="button">← Previous</button><label for="page-select">Page</label><select id="page-select" aria-label="Choose magazine page"></select><span>of 24</span><button class="btn primary" id="next" type="button">Next →</button><button class="btn" id="full" type="button">⛶ Fullscreen</button></div>
+<div id="status" class="status" role="status" aria-live="polite">Loading flipbook…</div>
+<div class="reader" id="reader"><div id="flipbook"></div><div class="fallback" id="fallback"><img id="fallback-img" alt="Magazine page 1 of 24"></div></div>
+<p class="hint">Portrait: one page. Landscape on sufficiently wide screens: two facing pages. Swipe or use the controls to turn pages. The front cover appears on its own.</p>
+<div class="links"><a href="issue-001-preview.pdf" download>Download full PDF</a><a href="issue-001-preview.pdf" target="_blank" rel="noopener">Open PDF separately</a></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+<script>
+(()=>{'use strict';const TOTAL=24;const $=id=>document.getElementById(id);const select=$('page-select'),prev=$('prev'),next=$('next'),status=$('status'),book=$('flipbook'),fallback=$('fallback'),fallbackImg=$('fallback-img');let flip=null,current=0,usingFallback=false;
+for(let i=1;i<=TOTAL;i++){let opt=document.createElement('option');opt.value=i-1;opt.textContent=i;select.appendChild(opt)}
+function url(i){return `Pages/page-${String(i+1).padStart(2,'0')}.webp`}
+function update(i){current=Math.max(0,Math.min(TOTAL-1,i));select.value=String(current);prev.disabled=current===0;next.disabled=current===TOTAL-1;if(usingFallback){fallbackImg.src=url(current);fallbackImg.alt=`Magazine page ${current+1} of ${TOTAL}`}status.textContent=`Page ${current+1} of ${TOTAL}`}
+function fallbackMode(message){usingFallback=true;book.style.display='none';fallback.style.display='block';status.textContent=message||'Simple page reader';update(current)}
+function go(i){i=Math.max(0,Math.min(TOTAL-1,i));if(flip){flip.turnToPage(i)}else{update(i)}}
+prev.addEventListener('click',()=>go(current-1));next.addEventListener('click',()=>go(current+1));select.addEventListener('change',()=>go(Number(select.value)));$('full').addEventListener('click',()=>{let el=$('reader');if(document.fullscreenElement){document.exitFullscreen?.()}else{el.requestFullscreen?.().catch(()=>{})}});
+if(!window.St||!window.St.PageFlip){fallbackMode('Flip animation unavailable; showing accessible single-page reader.');return}
+try{
+const pages=[];for(let i=0;i<TOTAL;i++){const div=document.createElement('div');div.className='page';if(i===0)div.dataset.density='hard';const img=document.createElement('img');img.src=url(i);img.alt=`Magazine page ${i+1} of ${TOTAL}`;img.loading=i<3?'eager':'lazy';img.draggable=false;div.appendChild(img);book.appendChild(div);pages.push(div)}
+flip=new St.PageFlip(book,{width:640,height:850,size:'stretch',minWidth:180,maxWidth:640,minHeight:240,maxHeight:850,drawShadow:true,flippingTime:650,usePortrait:true,startPage:0,showCover:true,mobileScrollSupport:true,autoSize:true,maxShadowOpacity:.35,clickEventForward:true});flip.loadFromHTML(pages);flip.on('flip',e=>update(e.data));flip.on('changeOrientation',()=>update(flip.getCurrentPageIndex()));update(0);
+}catch(err){console.error(err);fallbackMode('Flipbook could not initialize; showing single-page reader.')}
+let touchX=null;fallback.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});fallback.addEventListener('touchend',e=>{if(touchX===null)return;const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>55)go(current+(dx<0?1:-1));touchX=null},{passive:true});
+})();
+</script></body></html>
