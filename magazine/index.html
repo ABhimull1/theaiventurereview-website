@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090f2c"><title>Issue 001 | The AI Venture Review™</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+:root{color-scheme:dark;--bg:#090f2c;--panel:#142346;--line:#536d9d;--text:#f3f6ff;--muted:#bac6df;--yellow:#ffdf4b;--cyan:#16c8f2}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit}header.magazine-legacy{position:relative;z-index:10;background:#0b1433;border-bottom:1px solid #30436e;padding:18px max(16px,4vw);display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:clamp(16px,2.6vw,23px);font-weight:850;text-decoration:none;letter-spacing:-.03em}.brand span{color:var(--cyan)}.tag{font-size:10px;letter-spacing:.17em;color:var(--muted);font-weight:750;margin-top:6px}.menu{position:relative}
+
+.menu {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.menu summary {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  min-width: 120px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+summary,.btn,select{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--text);font:inherit;font-weight:700;padding:12px 16px;cursor:pointer}summary{list-style:none}summary::-webkit-details-marker{display:none}.menu nav{position:absolute;right:0;top:calc(100% + 10px);min-width:220px;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 35px #0008;padding:10px}.menu nav a{display:block;text-decoration:none;padding:12px;border-radius:8px}.menu nav a:hover{background:#263961}main{max-width:1300px;margin:auto;padding:24px 14px 60px}h1{font-size:clamp(25px,5vw,42px);margin:0 0 8px}.sub{color:var(--muted);margin:0 0 18px}.toolbar{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}.btn:disabled{opacity:.4;cursor:not-allowed}.primary{background:var(--yellow);color:#10152b;border-color:var(--yellow)}select{min-width:70px}.status{font-size:13px;color:var(--muted);text-align:center;min-height:20px;margin-bottom:10px}.reader{width:100%;min-height:380px;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:pan-y}.page{background:white;overflow:hidden}.page img{display:block;width:100%;height:100%;object-fit:fill;user-select:none;-webkit-user-drag:none}.links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}.links a{display:inline-block;text-decoration:none;border:1px solid var(--line);padding:13px 18px;border-radius:999px;font-weight:650}.hint{text-align:center;color:var(--muted);font-size:14px;margin:16px auto;max-width:650px}.fallback{max-width:600px;margin:auto}.fallback img{display:block;width:100%;height:auto}#fallback{display:none} @media(max-width:550px){header{padding:14px}.tag{font-size:9px}.toolbar{gap:7px}.btn,select{padding:10px}.reader{min-height:280px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+/* Shared site header/footer take precedence over legacy magazine rules. */
+.site-header{position:sticky;top:0;z-index:20;padding:0;background:#090f29ef;border-bottom:1px solid #ffffff25}
+.site-header .nav{width:min(1140px,calc(100% - 38px));margin:auto;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.site-header .logo{font-size:19px;font-weight:850;letter-spacing:-.5px;text-decoration:none}
+.site-header .logo span{color:#27d7ff}.site-header .logo small{display:block;color:#b4c3df;font-size:10px;letter-spacing:1.8px;margin-top:6px}
+.site-header .navlinks{display:flex;gap:21px;flex-wrap:wrap;font-size:13px;font-weight:650}
+.site-header .mobile-nav{display:none}.site-header .navlinks a{padding:9px 2px}
+.site-header .navlinks a[aria-current="page"]{color:#ffdc45}
+main#main-content{max-width:1140px;padding:52px 18px 60px}
+.toolbar .btn{border-radius:40px}.reader:fullscreen{background:#090f2c;padding:16px}
+@media(max-width:760px){.site-header .nav{width:calc(100% - 32px);min-height:70px;gap:12px}.site-header .logo{font-size:clamp(13px,3.6vw,18px);max-width:calc(100% - 105px)}.site-header .logo small{font-size:8px;letter-spacing:1px}.site-header .nav>.navlinks{display:none}.site-header .mobile-nav{display:block;position:relative}.site-header .mobile-nav summary{display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid #6882b2;border-radius:10px;padding:9px 11px;background:#16264d;font-size:13px;color:white}.site-header .mobile-nav .navlinks{position:absolute;right:0;top:calc(100% + 10px);display:flex;flex-direction:column;flex-wrap:nowrap;gap:1px;width:min(270px,calc(100vw - 32px));max-height:calc(100vh - 100px);overflow:auto;padding:10px;background:#101d40;border:1px solid #5373a5;border-radius:13px;box-shadow:0 16px 45px #000b;font-size:15px}.site-header .mobile-nav .navlinks a{display:block;padding:11px 12px}main#main-content{padding:34px 16px 45px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><nav class="wrap nav"><a class="logo" href="../index.html">THE <span>AI VENTURE REVIEW™</span><small>PRACTICAL AI · AUTOMATION · INNOVATION</small></a><div class="navlinks"><a href="../magazine/" aria-current="page">Magazine</a><a href="../field-guide/">Field Guide</a><a href="../resources/">Resource Vault</a><a href="../advertise/">Advertise</a><a href="../subscribe/">Subscribe</a><a href="../links/">Quick Links</a></div><details class="mobile-nav"><summary aria-label="Open navigation menu">Menu</summary><div class="navlinks"><a href="../magazine/" aria-current="page">Magazine</a><a href="../field-guide/">Field Guide</a><a href="../resources/">Resource Vault</a><a href="../advertise/">Advertise</a><a href="../subscribe/">Subscribe</a><a href="../links/">Quick Links</a></div></details></nav></header>
+<main id="main-content"><h1>Read Issue 001 online</h1><p class="sub">AI Agents at Work · November 2026 · 24 pages</p>
+<div class="toolbar"><button class="btn" id="prev" type="button">← Previous</button><label for="page-select">Page</label><select id="page-select" aria-label="Choose magazine page"></select><span id="page-total">of 24</span><button class="btn primary" id="next" type="button">Next →</button><button class="btn" id="full" type="button">⛶ Fullscreen</button></div>
+<div id="status" class="status" role="status" aria-live="polite">Loading flipbook…</div>
+<div class="reader" id="reader"><div id="flipbook"></div><div class="fallback" id="fallback"><img id="fallback-img" alt="Magazine page 1 of 24"></div></div>
+<p class="hint">Portrait: one page. Landscape on sufficiently wide screens: two facing pages. Swipe or use the controls to turn pages. The front cover appears on its own.</p>
+<div class="links"><a href="issue-001-preview.pdf" download>Download full PDF</a><a href="issue-001-preview.pdf" target="_blank" rel="noopener">Open PDF separately</a></div>
+</main><footer class="footer"><div class="wrap"><span>© 2026 The AI Venture Review™ · Global AI insights and practical tools</span><span><a href="../contact/">Contact</a> · <a href="../links/">Quick Links</a></span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id), select=$('page-select'),prev=$('prev'),next=$('next'),status=$('status'),book=$('flipbook'),fallback=$('fallback'),fallbackImg=$('fallback-img');
+let flip=null,current=0,images=[],count=0,usingFallback=false;
+function update(i){current=Math.max(0,Math.min(count-1,i));select.value=String(current);prev.disabled=current===0;next.disabled=current===count-1;if(usingFallback&&images[current]){fallbackImg.src=images[current];fallbackImg.alt='Magazine page '+(current+1)+' of '+count}status.textContent='Page '+(current+1)+' of '+count}
+function fallbackMode(message){usingFallback=true;book.style.display='none';fallback.style.display='block';update(current);if(message)status.textContent=message}
+function go(i){i=Math.max(0,Math.min(count-1,i));if(flip){flip.flip(i)}else update(i)}
+prev.addEventListener('click',()=>go(current-1));next.addEventListener('click',()=>go(current+1));select.addEventListener('change',()=>go(Number(select.value)));
+$('full').addEventListener('click',()=>{const el=$('reader');if(document.fullscreenElement){document.exitFullscreen?.()}else{const p=el.requestFullscreen?.();p?.catch(()=>{})}});
+let touchX=null;fallback.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});fallback.addEventListener('touchend',e=>{if(touchX===null)return;const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>55)go(current+(dx<0?1:-1));touchX=null},{passive:true});
+async function init(){
+if(!window.pdfjsLib){status.textContent='PDF reader unavailable. Use the download or open PDF link below.';return}
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+try{
+const pdf=await pdfjsLib.getDocument('issue-001-preview.pdf').promise;count=pdf.numPages;
+select.replaceChildren();for(let i=0;i<count;i++){const opt=document.createElement('option');opt.value=i;opt.textContent=i+1;select.append(opt)}
+$('page-total').textContent='of '+count;
+for(let i=1;i<=count;i++){status.textContent='Preparing page '+i+' of '+count+'…';const page=await pdf.getPage(i);const base=page.getViewport({scale:1});const viewport=page.getViewport({scale:Math.min(1.5,850/base.width)});const canvas=document.createElement('canvas');canvas.width=Math.ceil(viewport.width);canvas.height=Math.ceil(viewport.height);await page.render({canvasContext:canvas.getContext('2d',{alpha:false}),viewport}).promise;images.push(canvas.toDataURL('image/jpeg',0.88));canvas.width=0;canvas.height=0;page.cleanup();if(i%3===0)await new Promise(resolve=>setTimeout(resolve,0))}
+if(!window.St?.PageFlip){fallbackMode('Flip animation unavailable — single-page reader ready.');return}
+try{const pages=images.map((src,i)=>{const div=document.createElement('div');div.className='page';if(i===0)div.dataset.density='hard';const img=document.createElement('img');img.src=src;img.alt='Magazine page '+(i+1)+' of '+count;img.draggable=false;div.append(img);book.append(div);return div});
+flip=new St.PageFlip(book,{width:640,height:850,size:'stretch',minWidth:180,maxWidth:640,minHeight:240,maxHeight:850,drawShadow:true,flippingTime:650,usePortrait:true,startPage:0,showCover:true,mobileScrollSupport:true,autoSize:true,maxShadowOpacity:.35,clickEventForward:true});
+flip.loadFromHTML(pages);flip.on('flip',e=>update(e.data));update(0)
+}catch(e){console.error(e);fallbackMode('Single-page reader ready.')}
+}catch(e){console.error(e);status.textContent='Unable to load magazine. Use the download or open PDF link below.'}
+}
+init();
+})();
+</script></body></html>
